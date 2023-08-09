@@ -4,9 +4,32 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
 
     //ENTRADA
-
+    const numero = prompt("Informe um número:");
+    const numero2 = prompt("Informe outro número:");
+    const numero3 = prompt("Informe o terceiro número:");
 
     //PROCESSAMENTO
+    if(numero < numero2 && numero <numero3 && numero2 < numero3){
+        alert(`${numero3} - ${numero2} - ${numero}`);
+    }
+    else if(numero2 < numero && numero2 < numero3 && numero < numero3){
+        alert(`${numero3} - ${numero} - ${numero2}`);
+    }
+    else if(numero3 < numero2 && numero3 <numero && numero < numero2){
+        alert(`${numero2} - ${numero} - ${numero3}`);
+    }
+    else if(numero2 < numero && numero2 <numero3 && numero3 < numero){
+        alert(`${numero} - ${numero3} - ${numero2}`);
+    }
+    else if(numero > numero2 && numero > numero3 && numero2 < numero3){
+        alert(`${numero} - ${numero3} - ${numero2}`);
+    }
+    else if(numero > numero2 && numero > numero3 && numero3 < numero2){
+        alert(`${numero} - ${numero2} - ${numero3}`);
+    }
+    else{
+        alert("Opção inválida!");
+    }
 
 
     //SAÍDA
