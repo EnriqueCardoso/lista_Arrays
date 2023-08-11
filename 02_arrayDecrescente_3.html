@@ -9,29 +9,33 @@
     const numero3 = prompt("Informe o terceiro número:");
 
     //PROCESSAMENTO
+    let numeros = [];
+
     if(numero < numero2 && numero <numero3 && numero2 < numero3){
-        alert(`${numero3} - ${numero2} - ${numero}`);
+        numeros = [numero3, numero2, numero]
     }
     else if(numero2 < numero && numero2 < numero3 && numero < numero3){
-        alert(`${numero3} - ${numero} - ${numero2}`);
+        numeros = (numero3, numero, numero2)
     }
     else if(numero3 < numero2 && numero3 <numero && numero < numero2){
-        alert(`${numero2} - ${numero} - ${numero3}`);
+        numeros = (numero2, numero, numero3);
     }
     else if(numero2 < numero && numero2 <numero3 && numero3 < numero){
-        alert(`${numero} - ${numero3} - ${numero2}`);
+        numeros = (numero, numero3, numero2);
     }
     else if(numero > numero2 && numero > numero3 && numero2 < numero3){
-        alert(`${numero} - ${numero3} - ${numero2}`);
+        numeros = (numero, numero3, numero2);
     }
     else if(numero > numero2 && numero > numero3 && numero3 < numero2){
-        alert(`${numero} - ${numero2} - ${numero3}`);
+        numeros = (numero, numero2, numero3);
     }
     else{
-        alert("Opção inválida!");
+        numeros = ("Opção inválida!");
     }
 
 
     //SAÍDA
+
+    alert(`${numeros.join(" - ")}`);
 
 </script>

@@ -4,21 +4,25 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2).
 
     //ENTRADA
-    const numero = prompt("Informe um número:");
-    const numero2 = prompt("Informe outro número:");
+    const numero = Number(prompt("Informe um número:"));
+    const numero2 = Number(("Informe outro número:"));
 
 
     //PROCESSAMENTO
-    if(numero > numero2){
-        alert(`${numero} - ${numero2}`);
+    let numeros = []
+
+    if(numero < numero2){
+        numeros  =[numero, numero2];
     }
-    else if(numero2 > numero){
-        alert(`${numero2} - ${numero}`);
+    else if(numero2 < numero){
+        numeros = [numero2, numero];
     }
     else{
-        alert("Opção inválida!");
+        numeros["Opção inválida!"];
     }
 
     //SAÍDA
+
+    alert(`${numeros.join(" - ")}`);
     
 </script>
