@@ -4,22 +4,59 @@
     // let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
     // let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
     // let carrosHatch = ["308", "Focus", "i30"];
-    
-    //Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, 
-    //peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+
+    //Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta, peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
 
     //Apresente a lista final de cada tipo de veículo.
 
-    //ENTRADA 
+    //ENTRADA
 
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
     let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
     let carrosHatch = ["308", "Focus", "i30"];
 
-    const carro1 = prompt
+
+
+    const tipo = prompt(`Informe qual é o tipo de carro deseja inserir, sendo = SU para SUV // SE para SEDAN // HA para HATCH...`).trim().toUpperCase();
+
+    const veiculo1 = prompt(`Adicione mais um carro a lista`).trim();
+    const veiculo2 = prompt(`Adicione mais um carro a lista`).trim();
+    const veiculo3 = prompt(`Adicione mais um carro a lista`).trim();
 
 
     //PROCESSAMENTO
+
+    if (tipo == "SE") {
+
+        cassosSedan.push(veiculo1);
+        cassosSedan.push(veiculo2);
+        cassosSedan.push(veiculo3);
+
+       alert(`A lista de carros de SUV é [${carrosSUV.join(' - ')}], a lista de SEDAN é [${cassosSedan.join(' - ')}], e a lista de carros HATCH [${carrosHatch.join(' - ')}]`)
+
+    }
+
+    else if (tipo == "SU") {
+        carrosSUV.push(veiculo1);
+        carrosSUV.push(veiculo2);
+        carrosSUV.push(veiculo3);
+
+       alert(`A lista de carros de SUV é [${carrosSUV.join(' - ')}], a lista de SEDAN é [${cassosSedan.join(' - ')}], e a lista de carros HATCH [${carrosHatch.join(' - ')}]`)
+    }
+
+    else if (tipo == "HA") {
+        carrosHatch.push(veiculo1);
+        carrosHatch.push(veiculo2);
+        carrosHatch.push(veiculo3);
+
+        alert(`A lista de carros de SUV é [${carrosSUV.join(' - ')}], a lista de SEDAN é [${cassosSedan.join(' - ')}], e a lista de carros HATCH [${carrosHatch.join(' - ')}]`)
+    }
+
+    else {
+       alert(`Ocorreu um erro, tente novamente!`)
+    }
+
+
 
 
     //SAÍDA
